@@ -5,7 +5,7 @@
  * Date: 7/02/2017
  * Time: 12:10
  */
-$tasks  = $query->selectAll('todos', 'Task');
+$tasks  = $app['database']->selectAll('todos', 'Task');
 
 
 

@@ -1,14 +1,19 @@
 <?php
 
-$query = require 'core/bootstrap.php';
+require 'core/bootstrap.php';
 require 'Task.php';
 
-$router = new Router;
-require 'routes.php';
+//$router = new Router;
+//require 'routes.php';
+//
 
-var_dump($_SERVER['REQUEST_URI']);
+//
+//
+//var_dump($uri);
+//
+//require $router->direct($uri);
 
-//require $router->direct('about');
+require Router::load('routes.php')->direct(Request::uri());
 
 //$animals = ['dog', 'cat'];
 
